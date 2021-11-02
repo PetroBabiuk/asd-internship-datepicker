@@ -10,7 +10,7 @@ const App = () => {
 				<div className='inputs'>
 					<input disabled  value={date.toLocaleDateString()} />
 					{/* __ */}
-					{/* <input disabled value={date.toLocaleDateString()} /> */}
+					<input disabled value={date.toLocaleDateString()} />
 				</div>
 			} 
 			<Datepicker
