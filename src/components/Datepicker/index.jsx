@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import * as calendar from './calendar';
+import * as calendar from '../../utils/calendar';
 import './index.css';
 
 const Datepicker = ({
     onChange = Function.prototype,
+    type,
     years = calendar.years,
     monthNames = calendar.monthNames,
     weekDayNames = calendar.weekDayNames,
@@ -110,6 +111,7 @@ const Datepicker = ({
 
 Datepicker.propTypes = {
     onChange: PropTypes.func.isRequired,
+    type: PropTypes.string.isRequired,
     years: PropTypes.oneOf([2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025]),
     monthNames: PropTypes.oneOf(['Січень', 'Лютий', 'Березень', 'Квітень', 'Травень', 'Червень', 'Липень', 'Серпень', 'Вересень', 'Жовтень', 'Листопад', 'Грудень']),
     weekDayNames: PropTypes.oneOf(['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Нд']),
