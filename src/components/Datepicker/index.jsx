@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import * as calendar from '../../utils/calendar';
-import './index.css';
+
 
 const Datepicker = ({
     onChange = Function.prototype,
@@ -98,7 +98,7 @@ const Datepicker = ({
 
     return (
         <div className="calendar">
-            <header>
+            <div>
                 <button
                     onClick={handlePrevMonthButtonClick}
                     disabled={date.getFullYear() === years[0] && date.getMonth() === 0}
@@ -130,7 +130,7 @@ const Datepicker = ({
                 >
                     {'>'}
                 </button>
-            </header>
+            </div>
 
             <table>
                 <thead>
