@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import Header from './Header';
+import MonthChangeButton from './MonthChangeButton';
+import Select from './Select';
+import Option from './Option';
 import * as calendar from '../../utils/calendar';
 
 
@@ -98,40 +102,40 @@ const Datepicker = ({
 
     return (
         <div className="calendar">
-            <div>
-                <button
+            <Header>
+                <MonthChangeButton
                     onClick={handlePrevMonthButtonClick}
                     disabled={date.getFullYear() === years[0] && date.getMonth() === 0}
                 >
                     {'<'}
-                </button>
-
-                <select
+                </MonthChangeButton>
+                <Select
                     value={date.getMonth()}
                     onChange={handleSelectMonthChange}
                 >
                     {monthNames.map((name, index) =>
-                        <option key={name} value={index}>{name}</option>
+                        <Option key={name} value={index} >
+                            {name}
+                        </Option>
                     )}
-                </select>
-
-                <select
+                </Select>
+                <Select
                     value={date.getFullYear()}
                     onChange={handleSelectYearChange}
                 >
                     {years.map(year =>
-                        <option key={year} value={year}>{year}</option>
+                        <Option key={year} value={year} >
+                            {year}
+                        </Option>
                     )}
-                </select>
-
-                <button
+                </Select>
+                <MonthChangeButton
                     onClick={handleNextMonthButtonClick}
                     disabled={date.getFullYear() === years[years.length - 1] && date.getMonth() === 11}
                 >
                     {'>'}
-                </button>
-            </div>
-
+                </MonthChangeButton>
+            </Header>
             <table>
                 <thead>
                     <tr>
@@ -149,7 +153,7 @@ const Datepicker = ({
                                     key={index}
                                     className={classNames('day', {
                                         'today': calendar.areEqual(date, new Date()),
-                                        'selected': calendar.areEqual(date,startDate) || selectedDates.some(selectedDate => calendar.areEqual(date,selectedDate))
+                                        'selected': calendar.areEqual(date, startDate) || selectedDates.some(selectedDate => calendar.areEqual(date, selectedDate))
                                     })}
                                     onClick={() => handleDayClick(date)}
                                 >{date.getDate()}</td>
