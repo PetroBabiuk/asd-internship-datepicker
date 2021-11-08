@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Datepicker from './components/Datepicker';
 import RadioButtonsForm from './components/RadioButtonsForm';
+import InputsForm from 'components/InputsForm';
 
 const App = () => {
 	const [startDate, setStartDate] = useState(null);
@@ -21,6 +22,9 @@ const App = () => {
 				setEndDate(endDate);
 			}
 		}
+		if (type === 'multirange') {
+		//	TODO:  додати логіку для мультирендж
+		}
 	}
 
 	return (
@@ -29,39 +33,18 @@ const App = () => {
 				onChange={(type) => setType(type)}
 			/>
 
-			{type === 'simple' && 
-				<div className='inputs'>
-					{startDate
-					? <input disabled value={startDate.toLocaleDateString()} />
-					: <input disabled value='--.--.----' />}
-				</div>
-			}
-
-			{type === 'range' &&  
-				<div className='inputs'>
-				{startDate
-					? <input disabled value={startDate.toLocaleDateString()} />
-					: <input disabled value='--.--.----' />}
-					__
-				{endDate
-					? <input disabled value={endDate.toLocaleDateString()} />
-					: <input disabled value='--.--.----' />}
-				</div>
-			}
-
-			{type === 'multirange' && startDate &&
-				<>
-					{ranges.map((range) => range ?
-						<div className='inputs' key={range}>
-							<input disabled value={startDate.toLocaleDateString()} />
-							__
-							<input disabled value={startDate.toLocaleDateString()} />
-						</div>
-						:
-						<></>
-					)}
-				</>
-			}
+			<InputsForm
+				type={type}
+				start={startDate
+					? startDate.toLocaleDateString()
+					: '--.--.----'
+				}
+				end={endDate
+					? endDate.toLocaleDateString()
+					: '--.--.----'
+				}
+				ranges={ranges}
+			/>
 
 			<Datepicker
 				onChange={(startDate, endDate) => handleChange(startDate, endDate)}

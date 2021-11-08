@@ -83,16 +83,16 @@ const Datepicker = ({
             }
             if (startDate !== null && endDate !== null && (startDate && date.getTime() !== startDate.getTime())
                 && selectedDates.every(selectedDate => (selectedDate.getTime() !== date.getTime()))) {
-                setStartDate(date);
-                setEndDate(null);
-                setSelectedDates([]);
+                    setStartDate(date);
+                    setEndDate(null);
+                    setSelectedDates([]);
             }
             if (startDate !== null && endDate !== null && (startDate && date.getTime() !== startDate.getTime())
                 && selectedDates.some(selectedDate => selectedDate.getTime() === date.getTime())) {
-                setSelectedDates([]);
-                setEndDate(date);
-                fillSelectedDates(startDate, date);
-                }
+                    setSelectedDates([]);
+                    setEndDate(date);
+                    fillSelectedDates(startDate, date);
+            }
         }
     };
 
