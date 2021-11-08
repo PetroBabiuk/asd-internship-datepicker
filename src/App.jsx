@@ -7,7 +7,7 @@ const App = () => {
 	const [startDate, setStartDate] = useState(null);
 	const [endDate, setEndDate] = useState(null)
 	const [type, setType] = useState('simple');
-	const [ranges, setRanges] = useState([1, 2, 3]);
+	const ranges = [1, 2, 3];
 	
 	const handleChange = (startDate, endDate) => {
 		if (type === 'simple') {
