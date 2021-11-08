@@ -1,23 +1,20 @@
 {
   "files": {
-    "main.css": "/asd-internship-datepicker/static/css/main.bfe78e41.chunk.css",
-    "main.js": "/asd-internship-datepicker/static/js/main.26d39e4d.chunk.js",
-    "main.js.map": "/asd-internship-datepicker/static/js/main.26d39e4d.chunk.js.map",
+    "main.js": "/asd-internship-datepicker/static/js/main.273b50b4.chunk.js",
+    "main.js.map": "/asd-internship-datepicker/static/js/main.273b50b4.chunk.js.map",
     "runtime-main.js": "/asd-internship-datepicker/static/js/runtime-main.edbd713b.js",
     "runtime-main.js.map": "/asd-internship-datepicker/static/js/runtime-main.edbd713b.js.map",
     "static/css/2.bc922b9c.chunk.css": "/asd-internship-datepicker/static/css/2.bc922b9c.chunk.css",
-    "static/js/2.054f1450.chunk.js": "/asd-internship-datepicker/static/js/2.054f1450.chunk.js",
-    "static/js/2.054f1450.chunk.js.map": "/asd-internship-datepicker/static/js/2.054f1450.chunk.js.map",
+    "static/js/2.4cd74b4e.chunk.js": "/asd-internship-datepicker/static/js/2.4cd74b4e.chunk.js",
+    "static/js/2.4cd74b4e.chunk.js.map": "/asd-internship-datepicker/static/js/2.4cd74b4e.chunk.js.map",
     "index.html": "/asd-internship-datepicker/index.html",
     "static/css/2.bc922b9c.chunk.css.map": "/asd-internship-datepicker/static/css/2.bc922b9c.chunk.css.map",
-    "static/css/main.bfe78e41.chunk.css.map": "/asd-internship-datepicker/static/css/main.bfe78e41.chunk.css.map",
-    "static/js/2.054f1450.chunk.js.LICENSE.txt": "/asd-internship-datepicker/static/js/2.054f1450.chunk.js.LICENSE.txt"
+    "static/js/2.4cd74b4e.chunk.js.LICENSE.txt": "/asd-internship-datepicker/static/js/2.4cd74b4e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.edbd713b.js",
     "static/css/2.bc922b9c.chunk.css",
-    "static/js/2.054f1450.chunk.js",
-    "static/css/main.bfe78e41.chunk.css",
-    "static/js/main.26d39e4d.chunk.js"
+    "static/js/2.4cd74b4e.chunk.js",
+    "static/js/main.273b50b4.chunk.js"
   ]
 }
